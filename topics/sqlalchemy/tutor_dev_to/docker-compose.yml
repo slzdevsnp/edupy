@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  appdb:
+    image: postgres:12.12
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "postgres" ]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - APP_DB_USER=learner
+      - APP_DB_PASS=StrongPassword123
+      - APP_DB_NAME=learnsqlalchemy
+    volumes:
+      - ./local_db:/docker-entrypoint-initdb.d/
+    ports:
+      - 5432:5432
