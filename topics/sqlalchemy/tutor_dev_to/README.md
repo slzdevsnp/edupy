@@ -1,3 +1,11 @@
+# tutorial
+https://dev.to/spaceofmiah/series/20051
+
+sqlAlchemy 2.0 doc
+https://docs.sqlalchemy.org/en/20/dialects/postgresql.html
+
+
+
 # intro
 SqlAlchemy is an ORM - object relational mapper.
 # steps 
@@ -10,6 +18,12 @@ CREATE DATABASE learnsqlalchemy;
 CREATE USER learner WITH PASSWORD 'StrongPassword123';
 GRANT ALL PRIVILEGES ON DATABASE learnsqlalchemy TO learner;
 ```
+
+start docker container with 
+```sh
+docker-compose up -d
+```
+
 
 ## 2. install packages
 install latest versions (more recneet then tutorial)
@@ -53,5 +67,25 @@ SQL DML(create, update, delete),  DQL(select)
 
 - `db/scripts/queries.py`   make db.scripts a package
 - `main.py` #in main observe methods tutor_step_x()
+
+main:tutor_step_6  insert values in table, update row, delete row
+
+## 6. ddl on sqlalchemy core api
+
+tutorial step 7
+
+main:tutor_step_7  table ddl using sqlAlchemy Api rather then raw sql
+
+
+## 7. dml on sqlalchemy core api
+
+tutorial step 8
+
+main:tutor_step_8
+
+created tables, inserted values, deleted, values, updated values
+
+## 8.  dml on connected tables
+tables: item, craveditme
 
 
