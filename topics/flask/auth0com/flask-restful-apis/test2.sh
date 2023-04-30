@@ -3,8 +3,11 @@
 ## linux based
 # start the cashman application
 # start bootstrap in another terminal
-#./bootstrap.sh &
+# expect the app runing in docker container started with docker-compose up  -d
+echo "starting docker container cashman in detached mode"
+docker run --name cashman -d -p 5000:5000 cashman
 
+sleep 3
 
 hdr_json="Content-Type: application/json"
 URL="http://localhost:5000"
@@ -38,5 +41,6 @@ curl -X POST -H "${hdr_json}" -d '{
 echo "# check incomes after new income was added"
 curl $URL/incomes
 
-# kill pocesses matching flask --debug run
-#kill -9 $(ps -aef | grep -e "flask --debug run" | awk '{print $2}')
+echo "stopping cashman docker container. This can take some seconds"
+docker stop cashman
+docker container rm cashman

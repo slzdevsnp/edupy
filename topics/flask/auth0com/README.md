@@ -57,6 +57,7 @@ installed marshmallow package `pipenv install marshmallow`
 - added classes *Transaction* and its derived *Income* and *Expense*  in `cashman/model`
 - replaced `index.py`
   
-`test2.sh` tests both endpoints
+`test2.sh` tests both endpoints  and start stops the app in  the container
+
 
 

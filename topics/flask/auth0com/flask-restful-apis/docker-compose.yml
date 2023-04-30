@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   cashman:
-    container_name: cashman
+    container_name: cashman_dc
     image: cashman
     ports:
       - "5000:5000"
