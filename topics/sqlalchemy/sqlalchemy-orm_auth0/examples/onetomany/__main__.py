@@ -31,6 +31,11 @@ def query_projects():
     session.close()
     return projects_query.all()
 
+def query_project_managers():
+    session = session_factory()
+    project_managers_query = session.query(ProjectManager)
+    session.close()
+    return project_managers_query.all()
 
 if __name__ == "__main__":
     projects = query_projects()
@@ -40,3 +45,8 @@ if __name__ == "__main__":
     projects = query_projects()
     for project in projects:
         print(f'"{project.title}" is managed by {project.project_manager.name}')
+
+    print(f'#####')
+    project_managers = query_project_managers()
+    for pm in project_managers:
+        print(f'pm: {pm.name} manages {pm.projects}')

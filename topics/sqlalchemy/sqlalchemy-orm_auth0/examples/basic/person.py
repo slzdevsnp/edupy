@@ -19,3 +19,11 @@ class Person(Base):
         self.date_of_birth = date_of_birth
         self.height = height
         self.weight = weight
+
+    def __repr__(self):
+        return f"<Person(id={self.id}," \
+               f" name='{self.name}'," \
+               f" date_of_birth={self.date_of_birth}," \
+               f" height={self.height}," \
+               f" weight={self.weight})>"
+

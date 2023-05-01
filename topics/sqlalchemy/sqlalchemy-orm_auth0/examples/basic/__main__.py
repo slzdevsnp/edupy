@@ -8,8 +8,10 @@ def create_people():
     session = session_factory()
     bruno = Person("Bruno Krebs", date(1984, 10, 20), 182, 84.5)
     john = Person("John Doe", date(1990, 5, 17), 173, 90)
+    pierre = Person("Pierre", date(1991, 6, 17), 173, 90)
     session.add(bruno)
     session.add(john)
+    session.add(pierre)
     session.commit()
     session.close()
 
@@ -29,3 +31,4 @@ if __name__ == "__main__":
 
     for person in people:
         print(f'{person.name} was born in {person.date_of_birth}')
+    print(f'we finished running this test')

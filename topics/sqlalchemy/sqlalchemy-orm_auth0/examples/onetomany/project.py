@@ -12,10 +12,13 @@ class Project(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String)
     description = Column(String)
-    project_manager_id = Column(Integer, ForeignKey('project_manager.id'))
+    project_manager_id = Column(Integer, ForeignKey('project_manager.id')) #!
     project_manager = relationship("ProjectManager", back_populates="projects")
 
     def __init__(self, title, description, project_manager):
         self.title = title
         self.description = description
         self.project_manager = project_manager
+
+    def __repr__(self): #!
+        return "<Project('%s', '%s', '%s')>" % (self.title, self.description, self.project_manager) #!

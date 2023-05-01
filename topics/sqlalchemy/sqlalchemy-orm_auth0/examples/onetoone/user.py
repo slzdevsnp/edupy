@@ -11,7 +11,7 @@ class User(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
-    mobile = relationship("Mobile", uselist=False, backref="owner")
+    mobile = relationship("Mobile", uselist=False, backref="owner") # vs back_populates
 
     def __init__(self, name):
         self.name = name
