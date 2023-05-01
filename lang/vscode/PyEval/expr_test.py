@@ -55,7 +55,7 @@ class TestPyEval(unittest.TestCase):
 
     def test_triple_term_expression(self):
         '''
-        Tests a set of triple term expressions
+        Tests a set of triple term expressions. Yet another change.
         '''
         expr = Expression("53+2+37")
         self.assertEqual("53 2 37 + + ", expr.result(), "ERROR: Add/Add expression")
