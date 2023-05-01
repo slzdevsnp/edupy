@@ -29,7 +29,7 @@ class TestPyEval(unittest.TestCase):
 
     def test_double_term_expression(self):
         '''
-        Tests a set of double term expressions
+        Tests a set of double term expressions  this is a small change ter
         '''
         expr = Expression("53+2")
         self.assertEqual("53 2 + ", expr.result(), "ERROR: Double positive term expression")
