@@ -46,5 +46,9 @@ def add_expense():
     return "", 204
 
 
+@app.route("/ping")
+def ping():
+    return "All good. You don't need to be authenticated to call this"
+
 if __name__ == "__main__":
     app.run()

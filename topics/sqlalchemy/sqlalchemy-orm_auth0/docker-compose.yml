@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  sqlalchemy-orm-psql:
+    image: postgres
+    container_name: sqlalchemy-orm-psql
+    environment:
+      POSTGRES_PASSWORD: dbpassword
+      POSTGRES_USER: dbuser
+      POSTGRES_DB: sqlalchemy-orm-tutorial
+    ports:
+      - '5432:5432'
+
