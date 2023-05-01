@@ -15,14 +15,14 @@ class TestPyEval(unittest.TestCase):
 
     def test_positive_operand_expression(self):
         '''
-        Tests a single positive operand expression
+        Tests a single positive operand expression. This is a small change
         '''
         expr = Expression("53")
         self.assertEqual("53 ", expr.result(), "ERROR: Positive operand")
 
     def test_negative_operand_expression(self):
         '''
-        Tests a single negative operand expression
+        Tests a single negative operand expression. This is a small change bis
         '''
         expr = Expression("-53")
         self.assertEqual("-53 ", expr.result(), "ERROR: Negative operand")
