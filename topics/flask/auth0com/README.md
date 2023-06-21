@@ -5,7 +5,12 @@ github: https://github.com/auth0-blog/flask-restful-apis
 
 **NB** fastAPI framework is a competitor to flask
 
-The gola of the appis to help users to manage incomes and expenses
+**NB1**added in a project bootstrap_venv.sh  to run project with virtualenv ~/venv/eduflask
+
+in flask-restufl-apis/README.md  explained how to add pycharm  flask server run/debug coofig
+
+# goal
+The goal of the appis to help users to manage incomes and expenses
 
 # prep environment
 
